@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #f6f6f6;
+        }
+    </style>
+</head>
+<body>
+<img src="/code" alt="验证码" id="code">
+<a href="" id="change">看不清？换一张</a>
+
+<script>
+    window.onload=function (){
+        //获取图片对象
+        let img = document.getElementById("code");
+        img.onclick=function (){
+            //加时间戳
+            const time = new Date().getTime();
+            img.src="/code?"+time;
+        }
+    }
+</script>
+</body>
+</html>
